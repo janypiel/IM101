@@ -252,7 +252,7 @@
 }
 .services-section1 h2 {
   display: inline-block;
-  border-bottom: 2px solid #edc500; /* Adjust color as needed */
+  border-bottom: 2px solid #f6d08c; /* Adjust color as needed */
   padding-bottom: 5px; /* Space between text and underline */
   margin-bottom: 20px; /* Space below the heading */
 }
@@ -383,3 +383,46 @@
   opacity: 0.5; /* Make the button appear disabled */
   cursor: not-allowed; /* Change cursor to not-allowed */
 }
+.social-footer {
+  text-align: center; /* Center the text within the footer */
+  margin-top: 0; /* No margin at the top */
+  margin-bottom: 130px;
+  margin-left: 115px;
+  position: absolute; /* Allows free placement */
+  left: 0; /* Align to the left */
+  bottom: 0; /* Align to the bottom */
+  width: auto; /* Allow the width to auto-adjust */
+  padding: 10px; /* Optional: Add some padding */
+}
+
+.social-footer p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+.social-icons svg {
+  vertical-align: middle;
+}
+.phone-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-top: 15px; /* Space between social icons and phone */
+  color: #000000; /* Color for the phone text */
+}
+
+.phone-icon span {
+  margin-left: 10px; /* Space between the icon and phone number */
+}
+  
