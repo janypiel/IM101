@@ -1,0 +1,50 @@
+.finalize-reservation-container {
+    padding: 20px;
+  }
+  
+  .reservation-summary-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .reservation-details {
+    margin-bottom: 20px;
+  }
+  
+  .reservation-details p {
+    margin: 5px 0;
+  }
+  
+  .error-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #fff
+  }
+  
+ .sample-button button  {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+  }
+  
+  .sample-button button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  

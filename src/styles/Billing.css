@@ -1,0 +1,55 @@
+.billing-list-container {
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.billing-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(6, 1fr); /* Fixed 6 columns */
+    gap: 15px; /* Space between grid items */
+}
+
+.billing-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute space */
+    align-items: flex-start; /* Align items to the left */
+}
+
+.billing-item p {
+    margin: 5px 0;
+}
+
+.pay-now-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pay-now-button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
