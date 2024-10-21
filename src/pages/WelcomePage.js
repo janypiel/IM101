@@ -4,6 +4,8 @@ import CreateAccountPage from './CreateAccountPage';
 import '../styles/WelcomePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FaFacebook, FaInstagram, FaFacebookMessenger, FaPhone } from 'react-icons/fa';
+
 
 
 import image1 from '../images/chic1.jpg';
@@ -23,10 +25,12 @@ const WelcomePage = () => {
     {
       image: branch1Image,
       address: 'Chippens Dormitory, 368 Padre Gomez St., Poblacion District, Davao City',
+      locationLink:'https://www.google.com/maps/search/?api=1&query=Chippens+Dormitory%2C+368+Padre+Gomez+St.%2C+Poblacion+District%2C+Davao+City', // Link for Branch 1', // Link for Branch 1
     },
     {
       image: branch2Image,
       address: 'Rizal Extension, Corner De Jesus St, Davao City',
+      locationLink:'https://www.google.com.ph/maps/place/Chic+Station+2/@7.06557,125.6117314,17z/data=!4m14!1m7!3m6!1s0x32f96d69293c4605:0xcc0838259e91370e!2sChic+Station+2!8m2!3d7.0655126!4d125.6119076!16s%2Fg%2F11s436fwh_!3m5!1s0x32f96d69293c4605:0xcc0838259e91370e!8m2!3d7.0655126!4d125.6119076!16s%2Fg%2F11s436fwh_?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D', // Link for Branch 2', // Link for Branch 2
     },
   ];
 
@@ -238,36 +242,59 @@ const WelcomePage = () => {
             ensure every experience leaves you feeling refreshed and beautiful.
           </p>
         </div>
-        <div className="branch-image">
-  <div className="branch-navigation">
-    <button
-      onClick={handlePrevBranch}
-      className="branch-button left"
-      disabled={branches.length <= 1}
-    >
-      <FontAwesomeIcon icon={faChevronLeft} />
-    </button>
-    <h3>{`Branch ${currentBranch + 1}`}</h3>
-    <button
-      onClick={handleNextBranch}
-      className="branch-button right"
-      disabled={branches.length <= 1}
-    >
-      <FontAwesomeIcon icon={faChevronRight} />
-    </button>
-  </div>
+          <div className="branch-image">
+    <div className="branch-navigation">
+      <button
+        onClick={handlePrevBranch}
+        className="branch-button left"
+        disabled={branches.length <= 1}
+      >
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </button>
+      <h3>{`Branch ${currentBranch + 1}`}</h3>
+      <button
+        onClick={handleNextBranch}
+        className="branch-button right"
+        disabled={branches.length <= 1}
+      >
+        <FontAwesomeIcon icon={faChevronRight} />
+      </button>
+    </div>
 
-  <div className="image-container">
-    <img
-      src={branches[currentBranch].image}
-      alt={`Chic Station Branch ${currentBranch + 1}`}
-    />
-  </div>
-  <p>{branches[currentBranch].address}</p>
-</div>
-
-
+    <div className="image-container">
+      <a 
+        href={branches[currentBranch].locationLink} 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <img
+          src={branches[currentBranch].image}
+          alt={`Chic Station Branch ${currentBranch + 1}`}
+        />
+      </a>
+    </div>  
+    <p>{branches[currentBranch].address}</p>
+    </div>
+    <footer className="social-footer">
+      <p>Contact Us</p>
+      <div className="social-icons">
+        <a href="https://www.facebook.com/chicstationdavao" target="_blank" rel="noopener noreferrer">
+          <FaFacebook size={30} />
+        </a>
+        <a href="https://www.instagram.com/chic.stationdvo/" target="_blank" rel="noopener noreferrer">
+          <FaInstagram size={30} />
+        </a>
+        <a href="https://www.messenger.com/t/111130090723943" target="_blank" rel="noopener noreferrer">
+          <FaFacebookMessenger size={30} />
+        </a>
+        <div className="phone-icon">
+          <FaPhone size={25} />
+          <span> (+63) 945-443-0380 </span>
+        </div>
       </div>
+    </footer>
+    </div>
+    
     </div>
   );
 };
