@@ -109,7 +109,7 @@ const ProfilePage = () => {
       <Header />
     <div className="profile-page-container">
       <div className="profile-page">
-        <h1>User Profile</h1>
+        <h1></h1>
         <div className="profile-picture">
           <img
             src={imageUrl || img}
